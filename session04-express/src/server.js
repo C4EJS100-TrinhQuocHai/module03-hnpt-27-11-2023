@@ -111,6 +111,7 @@ app.patch("/api/v1/users/:id", (req, res) => {
         message: "cập nhật thành công!"
     })
 })
+// app.use("/api/v1/user")
 server.listen(port, () => {
     console.log("đang gọi server");
 })
