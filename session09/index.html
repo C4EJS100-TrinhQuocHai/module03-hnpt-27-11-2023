@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        1.Các kiểu dữ liệu trong mysql
+            -int: thường lưu giá trị số
+            -varchar: lưu giá trị string
+            -char: lưu giá trị string
+            ==> sự khác nhau giữa varchar và char là khi khi báo độ dài của kiểu 
+            dữ liệu char thì mặc định cung cấp bộ nhớ đúng bằng mình khai báo
+            ví dụ : char length=50 (mặc định tạo 50 địa chỉ ô nhớ lưu)
+            dữ liệu lưu với dạng varchar (length:50) thì nếu lưu giá trị bao nhiêu
+            thì sẽ cấp ô nhớ bấy nhiêu
+            -text, longtext: thường dùng để lưu các giá trị text có nội dung dài
+            ví dụ như description : mô tả sản phẩm, ảnh sản phẩm
+            -blob : có thể lưu giá trị ảnh
+            -enum (val1,val2,) : thường lưu các giá trị lựa chọn
+            Ví dụ : giới tính : nam,nữ, giới tính khác
+            hay là trạng thái đơn hàng : đang chờ xử lý, đang giao, hoàn thành
+            -boolean: kiểu đúng sai
+            -date,datetime: lưu giá trị thời gian
+            -- tài liệu đọc thêm (data-type-mysql-w3)
+        2. các kiểu quan hệ  trong mysql
+
+            1-1
+            VD1: trong 1 lớp sẽ có 1 lớp trưởng
+            VD2: trong 1 lớp chỉ có 1 giáo viên chủ nhiệm
+            ==> là dạng quan hệ 1 dòng bản ghi bản này quan hệ với 1 dòng bản ghi
+            của bảng khác
+            1-n ( 1-nhiều)
+            VD1: 1 sản phẩm có nhiều ảnh
+            VD2: 1 danh mục có thể có nhiều sản phẩm
+            là loại liên kết mà 1 dòng của bảng ghi thứ nhất quan hệ với nhiều dòng
+            của bảng ghi thứ 2 hoặc ngược lại
+            n-n ( nhiều nhiều)
+            VD1: mỗi học sinh có thể học nhiều môn
+             mỗi môn học thì có thể có nhiều người cùng học 
+
+        3.join table
+            -để join bảng thì các bảng phải có liên kết với nhau
+        4.mệnh đề alias
+        5. Các ràng buộc trong MYSQL
+        -primary: khóa chính : mỗi 1 bảng sẽ có 1 khóa chính
+        -unique: là duy nhất các dữ liệu trong column không được trùng nhau
+        -Foreign_key : khóa ngoại dùng để liên kết giữa  các table với nhau
+            + giúp tạo kiên kết giữa các bảng lại với nhau
+            + giúp bảo vệ dữ liệu
+        -tạo 1 danh mục sản phẩm _  category và liên kết bảng product
+        tức là phải biết cái sản phẩm tạo thuộc về danh mục nào
+        bài tập :
+        thiết kế cơ sở dữ liệu gồm các table sau
+        1. table phòng ban
+            -mã phòng ban id
+            - chứa id của  nhân viên
+        2. table nhân viên
+            - mã nhân viên
+            - name: tên nhân viên
+            - age: tuổi
+            - address: địa chỉ của nhân viên
+        -- thực hiện liên kết giữa 2 bảng nhân viên và phòng ban tức là nhân viên
+        phải thuộc về phòng ban nào
+         tiến hành dùng các lệnh join 2 bảng
+         - lấy thông tin của nhân viên có id=1
+         - sắp xếp theo thứ tự tăng dần của bảng nhân viên
+     -->
+</body>
+</html>
