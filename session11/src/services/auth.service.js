@@ -34,7 +34,7 @@ async function login(email, password) {
          */
       let mk=  bcrypt.compare(password,user.password)
         mk.then((result)=>{
-             console.log("kết quả sau khi so sánh mật khẩu", result);
+            
             if(result){
                 // tạo jwt cho user
                 // không nên gửi mật khẩu về 
@@ -46,11 +46,14 @@ async function login(email, password) {
                     "secret", { expiresIn: "1h" }
                 );
                 console.log(11111,token);
+                localStorage.setItem("token",token);
                 return {
                     token,
                 };
             }else{
-                console.log("tài khoản không hợp lệ!");
+               return {
+                    message:"tài khoản không hợp lệ!"
+               }
             }
         }).catch((err)=>{
             console.log(err);
